@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 grunt.initConfig({
   express: {
     options: {
-      // Override defaults here
+      port: 3000
     },
     dev: {
       options: {
@@ -17,4 +17,4 @@ grunt.initConfig({
 
 grunt.registerTask('start', [ 'express:dev']);
 
-};
+}; port: 3000
