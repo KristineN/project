@@ -1,12 +1,9 @@
 var express = require('express');
 var app = express();
+var server = require('http').createServer(app);
 
-app.get('/', function (req, res) {
-  res.send("bla")
-  console.log("here bla")
+app.get('/', function(req, rex) {
+  res.sendfile('src/index.html');
 });
 
-
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+server.listen(3000);
