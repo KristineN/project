@@ -1,20 +1,29 @@
 
+var getMovieData = document.getElementById('button')
 
-/*document.getElementById('button').click = a;
-
-		var a = function(but) {
-			console.log("Hello");
-		};
-
-		if( document.body.attachEvent)
-			document.getElementById('button').attachEvent("click", a);*/
-
-
-var el = document.getElementById('#button')
 	clickerFn = function(but) {
+
 		console.log('Hello world');
 	}
 
-	el.addEventListener('click', clickerFn);
+getMovieData.addEventListener('click', clickerFn);
 
 
+
+function loadPhones() {
+
+	var xhr = new XMLHttpRequest();
+
+xhr.open('GET', 'https://www.gismeteo.ua/', true);
+
+xhr.send();
+
+xhr.onreadystatechange = function(but) {
+	if (this.readyState  = 4) return;
+
+	if (this.status  = 200) {
+		alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+		return;
+	
+  }
+}
