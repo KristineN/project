@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+	<button onclick="pogoda()" id="button">Pogoda</button>
+
+	<script> 
+		function pogoda() {
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.open('GET', 'https://sinoptik.ua/', true);
+
+			xhr.send();
+
+			xhr.onreadystatechange = function() {
+				if (this.readyState ! = 4) return;
+
+				if (this.status != 200) {
+					alert('ошибка: ' + (this.status ? this.statusText : 'запрос не удался'));
+					return;
+				}
+			}
+		}
+
+
+	</script>
+</body>

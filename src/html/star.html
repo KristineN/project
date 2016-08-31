@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<link href="D:\project\src\css" rel="stylesheet" type="text/css" />
+<body>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+function set_rate(event, el) {
+    // РџРѕР·РёС†РёСЏ РєР»РёРєР° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЌР»РµРјРµРЅС‚Р°
+    event = event || window.event;
+    if (event.clientX<=el.clientWidth) {
+        var rate=Math.ceil(event.clientX/el.clientWidth*5);
+
+        // РўРµРїРµСЂСЊ Р·РЅР°С‡РµРЅРёРµ rate РѕС‚ 1 РґРѕ 5 РјРѕР¶РЅРѕ РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ РєР°Рє РЅР°РґРѕ
+       // document.getElementById('rate').innerHTML='Your Rate is '+rate;
+       // el.getElementsByTagName('div')[0].style.width=rate*20+'%';
+    }
+}
+/*]]>*/
+</script>
+	<!-- полоса рейтинга установлена на 35% -->
+<div class="rate_background" onclick="set_rate(arguments[0], this);">
+    <div class="rate_bar" style="width:50%;"></div>
+</div>
+<div id="rate"></div>
+</body>
+</html>

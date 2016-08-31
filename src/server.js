@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 
-app.get('/', function(req, rex) {
+app.get('/', function(req, res) {
   res.sendfile('src/index.html');
 });
 
