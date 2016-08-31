@@ -5,7 +5,7 @@
 		<title>Project</title>
 		<style ></style>
 	</head>
-	<link href="D:\Проект\CSS\index.css" rel="stylesheet" type="text/css">
+	<link href="D:\project\src\css\index.css" rel="stylesheet" type="text/css">
 	<body class="body">
 	<div style="width: 130px; height: 70px; border: 1px solid">
 		<tr>
@@ -22,8 +22,37 @@
 
 	</div>
 
-	<script src="\project\src\js\search.js"></script>
-	<script src="\project\src\js\show-results.js"></script>
+	<script src="js\search.js"></script>
+	<script src="js\show-results.js"></script>
+
+	<button onclick="()" id="button" value="smth" style="width: 30px; height: 40px;"></button>
+
+	<script>
+		/*function() {
+			console.log("Hello");
+		}
+
+		button.onclick = function() {
+			console.log
+		}
+
+		button.addEventListener('click', function());*/
+
+		document.getElementById('button').onclick = function() {
+			
+		}
+		var a = function() {
+			console.log("Hello");
+		};
+
+		if( document.body.attachEvent)
+			document.getElementById('button').attachEvent("click", a);
+
+
+
+
+	</script>
+
 
 	</body>
 </html>
