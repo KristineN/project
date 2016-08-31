@@ -1,9 +1,8 @@
 
 
-document.getElementById('button').onclick = function() {
-			
-		}
-		var but = function(but) {
+document.getElementById('button').click = a;
+
+		var a = function(but) {
 			console.log("Hello");
 		};
 
