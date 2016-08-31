@@ -10,7 +10,7 @@
 			document.getElementById('button').attachEvent("click", a);*/
 
 
-var el = document.getElementById('button')
+var el = document.getElementById('#button')
 	clickerFn = function(but) {
 		console.log('Hello world');
 	}
