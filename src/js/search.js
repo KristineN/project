@@ -10,7 +10,7 @@ getMovieData.addEventListener('click', clickerFn);
 
 
 
-function loadPhones() {
+function run() {
 
 	var xhr = new XMLHttpRequest();
 
@@ -25,5 +25,6 @@ xhr.onreadystatechange = function(but) {
 		alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
 		return;
 	
-  }
+  		}
+	}
 }
