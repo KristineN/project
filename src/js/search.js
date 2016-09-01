@@ -5,16 +5,13 @@ var getMovieData = document.getElementById('button')
 
 		console.log('search');
 
-			return search();
+			
 	}
 
 getMovieData.addEventListener('click', clickerFn);
 
 
-
-
-
-function search() {
+/*function search() {
 
 	var xhr = new XMLHttpRequest();
 
@@ -32,11 +29,25 @@ xhr.onreadystatechange = function() {
 		return;
 
 		alert(xhr.onreadystatechange);
-
-
    }
 
 }
 
-}
- 
+}*/
+ function mySearch() {
+
+ 	var req = new XMLHttpRequest();
+
+	req.open('GET', 'https://www.gismeteo.ua/', true);
+	req.onreadystatechange = function (aEvt) {
+		if (req.readyState == 4) {
+			if (req.status == 200)
+				dump(req.responseText);
+			else
+				dump("Error loading page\n");
+		}
+	}
+	req.send(null);
+
+ }
+document.ready(function({}));
