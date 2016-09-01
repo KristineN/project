@@ -5,8 +5,9 @@ var getMovieData = document.getElementById('button')
 
 		console.log('search');
 
-			
+		return mySearch();
 	}
+
 
 getMovieData.addEventListener('click', clickerFn);
 
@@ -38,16 +39,19 @@ xhr.onreadystatechange = function() {
 
  	var req = new XMLHttpRequest();
 
-	req.open('GET', 'https://www.gismeteo.ua/', true);
+	req.open('GET', 'http://finance.i.ua/', true);
+
 	req.onreadystatechange = function (aEvt) {
+
 		if (req.readyState == 4) {
 			if (req.status == 200)
 				dump(req.responseText);
 			else
 				dump("Error loading page\n");
+
+			req.send(null);
+				(document).ready(function() {});
+
 		}
 	}
-	req.send(null);
-
  }
-document.ready(function({}));
