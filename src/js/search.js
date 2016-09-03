@@ -3,11 +3,10 @@ var getMovieData = document.getElementById('button')
 
 	clickerFn = function(but) {
 
-		console.log('search');
+			
 
-		return mySearch();
+		 return mySearch();
 	}
-
 
 getMovieData.addEventListener('click', clickerFn);
 
@@ -34,14 +33,14 @@ xhr.onreadystatechange = function() {
 
 }
 
-}*/
+}
  function mySearch() {
 
  	var req = new XMLHttpRequest();
 
 	req.open('GET', 'http://finance.i.ua/', true);
 
-	req.onreadystatechange = function (aEvt) {
+	req.onreadystatechange = function () {
 
 		if (req.readyState == 4) {
 			if (req.status == 200)
@@ -52,6 +51,32 @@ xhr.onreadystatechange = function() {
 			req.send(null);
 				(document).ready(function() {});
 
+document.getElementById('button').onclick = function mySearch();
+
 		}
+
 	}
+
+	console.log('function');
+
+ }*/
+function mySearch() {
+
+	 var xhr = new XMLHttpRequest();
+
+ xhr.open('GET', 'http://finance.i.ua/', true);
+
+ xhr.send();
+
+ if (xhr.status != 200) {
+
+ 	alert( xhr.status + ': ' + xhr.statusText );
+
+ } else {
+
+ 	alert(xhr.responseText);
  }
+
+}
+
+
