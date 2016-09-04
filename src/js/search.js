@@ -59,7 +59,6 @@ document.getElementById('button').onclick = function mySearch();
 
  }*/
 
- Access-Control-Allow-Origin 
 function mySearch() {
 
 	 var xhr = new XMLHttpRequest();
