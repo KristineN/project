@@ -6,4 +6,4 @@ app.get('/', function(req, res) {
   res.sendfile('src/index.html');
 });
 
-server.listen(3000);
+server.listen(8080);
