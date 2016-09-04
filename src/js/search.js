@@ -3,10 +3,35 @@ var getMovieData = document.getElementById('button')
 
 	clickerFn = function(but) {
 
-		 return mySearch();
+		 return button;
 	}
 
 getMovieData.addEventListener('click', clickerFn);
+
+
+function createCORSRequest(method, url){
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr){
+        xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined"){
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+    } else {
+        xhr = null;
+    }
+    return xhr;
+}
+
+var request = createCORSRequest("get", "https://openexchangerates.org/api/currencies.json");
+if (request){
+    request.onload = function(){
+        console.log(request.responseText)
+    };
+    request.send();
+}
+
+
+
 
 
 /*function search() {
@@ -72,7 +97,9 @@ xhr.onreadystatechange = function() {
 }*/
 
 
-function createCORSRequest(method, url){
+/*function clickCounter() {
+
+	function createCORSRequest(method, url){
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr){
         xhr.open(method, url, true);
@@ -92,6 +119,65 @@ if (request){
     };
     request.send();
 }
+
+}*/
+
+/*function addScript(src) {
+  var elem = document.createElement("script");
+  elem.src = src;
+  document.head.appendChild(elem);
+}
+
+addScript('https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB,EURRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=');
+
+
+function clickCounter() {
+
+	var JSONP = function(global){
+    // (C) WebReflection Essential - Mit Style
+	// 216 bytes minified + gzipped via Google Closure Compiler
+    function JSONP(uri, callback) {
+        function JSONPResponse() {
+            try { delete global[src] } catch(e) {
+                // kinda forgot < IE9 existed
+                // thanks @jdalton for the catch
+                global[src] = null
+            }
+            documentElement.removeChild(script);
+            callback.apply(this, arguments);
+        }
+        var
+            src = prefix + id++,
+            script = document.createElement("script")
+        ;
+        global[src] = JSONPResponse;
+        documentElement.insertBefore(
+            script,
+            documentElement.lastChild
+        ).src = uri + "=" + src;
+    }
+    var
+        id = 0,
+        prefix = "__JSONP__",
+        document = global.document,
+        documentElement = document.documentElement
+    ;
+    return JSONP;
+}(this);	
+
+JSONP("https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDRUB,EURRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=", function (a, b, c) {
+  this.document.body.innerHTML += [
+   a, b, ++many, c
+  ].join(" ") + "<br />";
+ })
+}*/
+	
+
+
+
+
+
+
 
  
 
