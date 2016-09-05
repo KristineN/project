@@ -36,9 +36,9 @@ if (request){
 
 var result = {
 
-"adult":false,
-"backdrop_path":"/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg",
-"belongs_to_collection":null,
+adult:false,
+backdrop_path:"/8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg",
+belongs_to_collection:null,
 "budget":63000000,
 "genres":[{"id":18,"name":"Drama"}],
 "homepage":"http://www.foxmovies.com/movies/fight-club",
@@ -63,12 +63,12 @@ var result = {
 "vote_count":5253
 }; 
 
+var resultStr = JSON.stringify(result);
+//console.log(typeof "result");
 
-console.log(typeof "result");
 
-JSON.stringify(result);
 
-localestoradge.setItem('MovieData', 'Cinema');
+localStorage.setItem('MovieData', 'Cinema');
 
 
 
