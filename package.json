@@ -12,5 +12,8 @@
     "express": "^4.14.0",
     "grunt": "^1.0.1",
     "grunt-express-server": "^0.5.3"
+  },
+  "dependencies": {
+    "imdb-api": "^2.0.0"
   }
 }
