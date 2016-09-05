@@ -1,1 +1,2 @@
-console.log('results - Hello');
+var item = localStorage.getItem('key');
+alert(item);
