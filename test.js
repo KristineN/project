@@ -31,18 +31,16 @@ var straw = '8';
 
 
 //1) приведи строку в логический тип так чтоб вышло один раз тру один раз фолс, 
- var Foo = String(undefined) === 'undefined';
- console.log(String(undefined) === 'undefined'); // true
+console.log( !!'bla bla'); // true
 
-var lie = false;
-console.log(lie); // false
+console.log( !!''); // false
 
 //2) приведи число в логический тип тоже чтоб один раз вышло тру второй фолс, 
 //все результать приведения запиши в переменные и выводи консоль логом.
 
-console.log( !!Number('25')); // true
+console.log( !!2); // true
 
-console.log( !!Number(''));// false
+console.log( !!0);// false
 
 // 1) напиши цикл вайл с условием (a < 10) при каждой итерации отнимай от переменной а 2 так чтоб было 5 итераций, 
 var a = 0; 
