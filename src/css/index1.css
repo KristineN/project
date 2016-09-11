@@ -17,7 +17,7 @@ body {
             background: #838283;
             height: 200px;
             width: 900px;
-            background-image: url(src/images/bg-header.ipg);
+            background-image: url("src/images/bg-header.ipg");
 
 }
  
