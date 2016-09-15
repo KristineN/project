@@ -43,7 +43,7 @@ var numb = 5;
 var n = 2; 
 
 function sumNumber() {
-	
+
 	var numm = 5;
 	var newNum = 10;
 
@@ -115,25 +115,3 @@ var arrayType = typeof myarray;
 typeMas({name: 'Olga'});  
 	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var arrayType = typeof typeMas;
-	var arr = 0;
-	for(i = 0; i <= myarray.length; i++) {
-		arr = arr + myarray[i];
-	}
-		return arr;
