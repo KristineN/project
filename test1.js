@@ -1,0 +1,139 @@
+/*1) напиши функцию простую в которой реализован свич кейс, он берет параметр переданый функции, и проверяет его тип, 
+в свич кейсе должно быть 6 кейсов, есле какойто кейс будет тру тогда выведи переменную которую получила, 
+например есле твоя функция получила строку она дожна свич кейсом узнать узнать какого типа переменная 
+и вывести ее консоль логом + тип */
+
+
+function newKey() {
+
+	var param = typeof 'bla';
+
+	switch (param) {
+		case 4:
+			console.log('не то');
+			break;
+		case  true:
+			console.log('не то');
+			break;
+		case 'string':
+			console.log('То, что надо');
+			break;
+		case { name: 'Lol'}:
+			console.log('Ваще не то');
+			break;
+		case null:
+			console.log('не то');
+			break;
+		case false:
+			console.log('не то');
+			break;
+		default:
+			console.log("Хрень какая-то");
+
+	}
+}
+ 
+console.log(newKey()); 
+
+
+/*2) создай 2 переменныйх числовых, опиши функцию которая будет брать из вне эти две переменных, 
+добавлять к 2 переменным числовым которые у нее описаны внутри и выводит консоль лог с суммой всех 4 чисел*/
+
+var numb = 5;
+var n = 2; 
+
+function sumNumber() {
+	
+	var numm = 5;
+	var newNum = 10;
+
+var number = numb + n + numm + newNum;
+
+console.log( number );
+
+}
+
+console.log( sumNumber() );  
+
+//3) создай функцию которая получает другую функцию как аргумент и вызывает ее, 
+//функцию которая передана как аргумент должна уметь выводить консоль лог
+
+
+function newFunc() {
+
+	return('Hello');
+}
+
+var f = newFunc;
+
+console.log( newFunc() ); 
+
+
+
+
+//4) создай функцию которая будет выводить консоль лог только есле ей передано 3 параметра 
+//и они все есть числами используй && 
+
+function showParam(one, two, three) {
+
+	var typeOne = typeof one;
+	var typeTwo = typeof two; 
+	var typeThree = typeof three;
+	
+	if (( typeOne === 'number') && ( typeTwo === 'number') && ( typeThree === 'number')) {
+
+			console.log('good');
+
+	} else {
+
+	 	    console.log('foooo');
+	} 
+
+ }
+		
+showParam('bla');
+
+//5) создай функцию которая будет принимать обьект как параметр или масив, 
+//есле передан обьект или масив выведи консоль лог что все ништяк, есле другой тип передат выведи еррор
+
+
+function typeMas(myarray) {      
+
+var arrayType = typeof myarray;       
+
+	if (arrayType === 'object' ) {	
+
+		 console.log("Good boy"); 			
+
+	} else {													
+
+			console.log( "This is bullshit!");    
+	}
+
+}
+
+typeMas({name: 'Olga'});  
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var arrayType = typeof typeMas;
+	var arr = 0;
+	for(i = 0; i <= myarray.length; i++) {
+		arr = arr + myarray[i];
+	}
+		return arr;

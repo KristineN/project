@@ -135,3 +135,45 @@ console.log(true && 123 && 'bla'); // 'bla' - последнее значени�
 //! "не" - возвращает противоположное значение, перед этим приводит к логическому типу (true/false) 
 console.log(!true) // false
 console.log(!false) //true
+
+
+
+SWITCH 
+// группировка 
+var b = 3 + 3;
+
+switch (b) {
+	case 6:
+		alert('правильно');
+		break;
+
+	case 5:
+	case 7:
+	case 8:
+		alert('и так тоже нет');
+		alert('НАКОНЕЦ');
+		alert('NOOOO');
+		break;
+
+	default:
+		alert( 'I dont now');
+}
+
+
+var a = +prompt('a?', '');
+
+switch (a) {
+	case 0:
+	console.log(0);
+	break;
+
+	case 1:
+	console.log(1);
+	break;
+
+	case 2:
+	case 3:
+
+console.log(2,3);
+break;
+}
