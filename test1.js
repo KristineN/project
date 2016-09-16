@@ -11,19 +11,19 @@ function newKey(boom) {
  switch (bla) {
 
 
- 	case 12:
- 		console.log('это цыферки');
+ 	case 'number':
+ 		console.log('это цbферки');
  		break;
- 	case false:
- 		console.log('not');
+ 	case "boolean":
+ 		console.log('bOoOol');
  		break;
  	case 'string':
  		console.log('gooood');
  		break;
- 	case null:
- 		console.log('ноуп');
+ 	case "object":
+ 		console.log('maybe');
  		break;
- 	case {}:
+ 	case "object":
  		console.log('не нужен бъект');
  		break;
  	default:
