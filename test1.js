@@ -4,36 +4,39 @@
 и вывести ее консоль логом + тип */
 
 
-function newKey() {
+function newKey(boom) {
 
-	var param = typeof 'bla';
+	bla = typeof boom;            
 
-	switch (param) {
-		case 4:
-			console.log('не то');
-			break;
-		case  true:
-			console.log('не то');
-			break;
-		case 'string':
-			console.log('То, что надо');
-			break;
-		case { name: 'Lol'}:
-			console.log('Ваще не то');
-			break;
-		case null:
-			console.log('не то');
-			break;
-		case false:
-			console.log('не то');
-			break;
-		default:
-			console.log("Хрень какая-то");
+ switch (bla) {
 
-	}
+
+ 	case 12:
+ 		console.log('это цыферки');
+ 		break;
+ 	case false:
+ 		console.log('not');
+ 		break;
+ 	case 'string':
+ 		console.log('gooood');
+ 		break;
+ 	case null:
+ 		console.log('ноуп');
+ 		break;
+ 	case {}:
+ 		console.log('не нужен бъект');
+ 		break;
+ 	default:
+ 		console.log('хренотенюшка')
+
+ }
 }
- 
-console.log(newKey()); 
+
+newKey(123);                   // вызываю ф-цию и передаю ей что-то..
+
+
+
+
 
 
 /*2) создай 2 переменныйх числовых, опиши функцию которая будет брать из вне эти две переменных, 
