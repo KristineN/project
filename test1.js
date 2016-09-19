@@ -60,14 +60,20 @@ console.log( number );
 //функцию которая передана как аргумент должна уметь выводить консоль лог
 
 
-function sayHi(bonjour) {
+var newFun = function() {
 
-	return('Hi');
+	return('hi');
+
+};
+
+function otherFun() {
+
+	//var sayHi = 'bonjour';
+
+	newFun();
 }
+console.log(newFun());
 
-var func = sayHi;
-
-console.log(func()); // не уверена, что правильно
 
 
 
