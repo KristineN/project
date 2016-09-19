@@ -56,21 +56,18 @@ console.log( number );
 
 }
 
-console.log( sumNumber() );  
-
 //3) создай функцию которая получает другую функцию как аргумент и вызывает ее, 
 //функцию которая передана как аргумент должна уметь выводить консоль лог
 
 
-function newFunc() {
+function sayHi(bonjour) {
 
-	return('Hello');
+	return('Hi');
 }
 
-var f = newFunc;
+var func = sayHi;
 
-console.log( newFunc() ); 
-
+console.log(func()); // не уверена, что правильно
 
 
 
