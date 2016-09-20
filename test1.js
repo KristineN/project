@@ -59,20 +59,27 @@ console.log( number );
 //3) создай функцию которая получает другую функцию как аргумент и вызывает ее, 
 //функцию которая передана как аргумент должна уметь выводить консоль лог
 
+var newFun = function Foo() {};
 
-var newFun = function() {
+function Boo(newFun) {
 
-	return('hi');
-
-};
-
-function otherFun() {
-
-	//var sayHi = 'bonjour';
-
-	newFun();
+	return newFun;
 }
-console.log(newFun());
+
+console.log(Boo(newFun));
+
+
+/*var newFun = function Foo() {};
+
+
+function Boo(newFun) {
+	
+	return newFun;
+}
+
+console.log(Boo('bla bla'));*/
+
+
 
 
 
@@ -121,3 +128,21 @@ var arrayType = typeof myarray;
 typeMas({name: 'Olga'});  
 	
 
+
+
+
+
+
+
+
+
+
+
+
+
+function Foo(text) {
+
+	return (text);
+}
+
+Foo('bla bla');
