@@ -59,14 +59,19 @@ console.log( number );
 //3) создай функцию которая получает другую функцию как аргумент и вызывает ее, 
 //функцию которая передана как аргумент должна уметь выводить консоль лог
 
-var newFun = function Foo() {};
+var newFun = function Foo(bonjour) {
 
-function Boo(newFun) {
+
+       return bonjour;
+
+}
+console.log(newFun('hello world'));
+
+
+function Boo(myFun) {
 
 	return newFun;
 }
-
-console.log(Boo(newFun));
 
 
 /*var newFun = function Foo() {};
