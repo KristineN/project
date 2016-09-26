@@ -35,10 +35,6 @@ function newKey(boom) {
 newKey(123);                   // вызываю ф-цию и передаю ей что-то..
 
 
-
-
-
-
 /*2) создай 2 переменныйх числовых, опиши функцию которая будет брать из вне эти две переменных, 
 добавлять к 2 переменным числовым которые у нее описаны внутри и выводит консоль лог с суммой всех 4 чисел*/
 
@@ -67,27 +63,12 @@ var newFun = function Foo(text) {
 	  return;
 
 }
- newFun(console.log);
 
 function Boo(myFun) {
 	
-	return newFun;
+	newFun();
 }
-
-------------------------------------------
-/*var newFun = function Foo() {};
-
-
-function Boo(newFun) {
-	
-	return newFun;
-}
-
-console.log(Boo('bla bla'));*/
-
-
-
-
+Boo(newFun);
 
 
 //4) создай функцию которая будет выводить консоль лог только есле ей передано 3 параметра 
@@ -134,21 +115,45 @@ var arrayType = typeof myarray;
 typeMas({name: 'Olga'});  
 	
 
+/*напиши 3 функции одна будет принимать как аргументы 2 функции,
+ две других будут принимать по 2 числа и возвращать их сумму ,
+ первой функции  передай 2 остальные функции, 
+ фнутри вызови их обоих передав по 2 числа в каждую,
+  получив результат от 2ух функций, просумируй его и
+  выведи в консоль лог*/
+
+  var firstFun = function Foo(num1, num2) {
+
+  		var firstSum = num1 + num2;   
+
+  	return firstSum;
+
+  };
 
 
+  var secondFun = function Boo(num3, num4) {
+
+  		var secondSum = num3 + num4;
+
+  	return secondSum;
+
+  };
 
 
+  function mainFun(fParam, sParam) {
+
+ 		var bla = firstFun(2, 4);							
+
+ 				var bla2 = secondFun(10, 6);
+
+					var mainSum = bla + bla2; 
+		
+				console.log(mainSum);
+
+		return;
+
+  }
+
+mainFun(firstFun, secondFun);
 
 
-
-
-
-
-
-
-function Foo(text) {
-
-	return (text);
-}
-
-Foo('bla bla');
